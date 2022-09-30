@@ -1,4 +1,4 @@
-<form class="w-100 my-5">
+<form class="w-100 my-5" [formGroup]="formulario" (ngSubmit)="analizarFormulario()">
 
     <div class="mb-5">
         <h3>Ingreso mercancia a cuarto de solución:</h3>
@@ -12,15 +12,19 @@
             <span class="input-group-text">
                 <i class="bi bi-box-seam-fill"></i>
             </span>
-            <input type="text" class="form-control" placeholder="IUP">
-        </div>
-    </div>
+            <input type="text" class="form-control" placeholder="IUP" formControlName="iup">
+            </div>
+            <div *ngIf="formulario.get('iup')?.touched && formulario.get('iup')?.errors?.['required']" class="form-text text-danger fw-bold">Este campo es obligatorio.</div>
 
+            <div *ngIf="formulario.get('iup')?.touched && formulario.get('iup')?.errors?.['minlength']" class="form-text text-danger fw-bold">Este campo debe de tener al menos 6 caractéres.</div>   
+    </div>
+    
     <div class="mb-3 mt-5">
         <h4>Remitente: </h4>
         <hr>
         <label class="form-label">Tipo de remitente: </label>
-        <input type="text" class="form-control" placeholder="TipoRemitente">
+        <input type="text" class="form-control" placeholder="TipoRemitente" formControlName="tiporemitente">
+        <div *ngIf="formulario.get('tiporemitente')?.touched && formulario.get('tiporemitente')?.errors?.['required']" class="form-text text-danger fw-bold">Este campo es obligatorio.</div>
     </div>
 
     <div class="mb-3">
@@ -30,7 +34,8 @@
                     <span class="input-group-text">
                         <i class="bi bi-key"></i>
                     </span>
-                    <input type="text" class="form-control" placeholder="identificación">
+                    <input type="text" class="form-control" placeholder="identificación" formControlName="idremitente">
+                    <div *ngIf="formulario.get('idremitente')?.touched && formulario.get('idremitente')?.errors?.['required']" class="form-text text-danger fw-bold">Este campo es obligatorio.</div>
                 </div>
             </div>
             <div class="col-6">
@@ -38,7 +43,8 @@
                     <span class="input-group-text">
                         <i class="bi bi-person-circle"></i>
                     </span>
-                    <input type="text" class="form-control" placeholder="Nombre">
+                    <input type="text" class="form-control" placeholder="Nombre" formControlName="nombreremitente">
+                    <div *ngIf="formulario.get('nombreremitente')?.touched && formulario.get('nombreremitente')?.errors?.['required']" class="form-text text-danger fw-bold">Este campo es obligatorio.</div>
                 </div>
             </div>
         </div>
@@ -47,10 +53,12 @@
     <div class="mb-3">
         <div class="row">
             <div class="col-6">
-                <input type="text" class="form-control" placeholder="departamento">
+                <input type="text" class="form-control" placeholder="departamento" formControlName="deptoremitente">
+                <div *ngIf="formulario.get('deptoremitente')?.touched && formulario.get('deptoremitente')?.errors?.['required']" class="form-text text-danger fw-bold">Este campo es obligatorio.</div>
             </div>
             <div class="col-6">
-                <input type="text" class="form-control" placeholder="municipio">
+                <input type="text" class="form-control" placeholder="municipio" formControlName="munucipioremitente">
+                <div *ngIf="formulario.get('munucipioremitente')?.touched && formulario.get('munucipioremitente')?.errors?.['required']" class="form-text text-danger fw-bold">Este campo es obligatorio.</div>
             </div>
         </div>
     </div>
@@ -60,7 +68,8 @@
             <span class="input-group-text">
                 <i class="bi bi-geo-alt"></i>
             </span>
-            <input type="text" class="form-control" placeholder="Dirección">
+            <input type="text" class="form-control" placeholder="Dirección" formControlName="direccionremitente">
+            <div *ngIf="formulario.get('direccionremitente')?.touched && formulario.get('direccionremitente')?.errors?.['required']" class="form-text text-danger fw-bold">Este campo es obligatorio.</div>
         </div>
     </div>
 
@@ -68,7 +77,8 @@
         <h4>Destinatario: </h4>
         <hr>
         <label class="form-label">Tipo de Destinatario: </label>
-        <input type="text" class="form-control" placeholder="TipoDestinatario">
+        <input type="text" class="form-control" placeholder="TipoDestinatario" formControlName="tipodestinatario">
+        <div *ngIf="formulario.get('tipodestinatario')?.touched && formulario.get('tipodestinatario')?.errors?.['required']" class="form-text text-danger fw-bold">Este campo es obligatorio.</div>
     </div>
 
     <div class="mb-3">
@@ -78,7 +88,8 @@
                     <span class="input-group-text">
                         <i class="bi bi-key"></i>
                     </span>
-                    <input type="text" class="form-control" placeholder="identificación">
+                    <input type="text" class="form-control" placeholder="identificación" formControlName="iddestinatario">
+                    <div *ngIf="formulario.get('iddestinatario')?.touched && formulario.get('iddestinatario')?.errors?.['required']" class="form-text text-danger fw-bold">Este campo es obligatorio.</div>
                 </div>
             </div>
             <div class="col-6">
@@ -86,7 +97,8 @@
                     <span class="input-group-text">
                         <i class="bi bi-person-circle"></i>
                     </span>
-                    <input type="text" class="form-control" placeholder="Nombre">
+                    <input type="text" class="form-control" placeholder="Nombre" formControlName="nombredestinatario">
+                    <div *ngIf="formulario.get('nombredestinatario')?.touched && formulario.get('nombredestinatario')?.errors?.['required']" class="form-text text-danger fw-bold">Este campo es obligatorio.</div>
                 </div>
             </div>
         </div>
@@ -95,10 +107,12 @@
     <div class="mb-3">
         <div class="row">
             <div class="col-6">
-                <input type="text" class="form-control" placeholder="Departamento">
+                <input type="text" class="form-control" placeholder="Departamento" formControlName="deptodestinatario">
+                <div *ngIf="formulario.get('deptodestinatario')?.touched && formulario.get('deptodestinatario')?.errors?.['required']" class="form-text text-danger fw-bold">Este campo es obligatorio.</div>
             </div>
             <div class="col-6">
-                <input type="text" class="form-control" placeholder="Municipio">
+                <input type="text" class="form-control" placeholder="Municipio" formControlName="munucipiodestinatario">
+                <div *ngIf="formulario.get('munucipiodestinatario')?.touched && formulario.get('munucipiodestinatario')?.errors?.['required']" class="form-text text-danger fw-bold">Este campo es obligatorio.</div>
             </div>
         </div>
     </div>
@@ -108,7 +122,8 @@
             <span class="input-group-text">
                 <i class="bi bi-geo-alt"></i>
             </span>
-            <input type="text" class="form-control" placeholder="Dirección">
+            <input type="text" class="form-control" placeholder="Dirección" formControlName="direcciondestinatario">
+            <div *ngIf="formulario.get('direcciondestinatario')?.touched && formulario.get('direcciondestinatario')?.errors?.['required']" class="form-text text-danger fw-bold">Este campo es obligatorio.</div>
         </div>
     </div>
 
