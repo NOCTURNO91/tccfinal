@@ -1,167 +1,129 @@
-<div class="conatiner-fluid">
-    <div class="row w-100">
-        <div class="col-12 col-md-6">
-            <form class="w-100">
-                <div class="row">
-                    <div class="col-12">
-                        <h4 class="mb-5">Ingreso mercancia:</h4>
-                        <hr>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">IUP</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                </div>
+<form class="w-100 my-5">
 
-                <div class="mb-3">
-                    <h4>Remitente: </h4>
-                    <hr>
-                    <label class="form-label">Tipo de remitente: </label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option value="1">Empresa</option>
-                        <option value="2">Persona Natural</option>
-                      </select>
-                </div>
+    <div class="mb-5">
+        <h3>Ingreso mercancia a cuarto de solución:</h3>
+        <hr>
+    </div>
 
-                <div class="mb-3">
-                    <div class="row">
-                        <div class="col-6">
-
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="basic-addon1">
-                                    <i class="bi bi-key"></i>
-                                </span>
-                                <input type="text" class="form-control" placeholder="identificación">
-                            </div>
-
-                        </div>
-                        <div class="col-6">
-
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="basic-addon1">
-                                    <i class="bi bi-person-circle"></i>
-                                </span>
-                                <input type="text" class="form-control" placeholder="Nombre">
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-
-               <div class="mb-3">
-                <div class="row">
-                    <div class="col-6">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Departamento</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                    </div>
-                    <div class="col-6">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Municipio</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                    </div>
-                </div>
-
-               </div>
-
-               <div class="mb-3">
-
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">
-                        <i class="bi bi-geo-alt"></i>
-                    </span>
-                    <input type="text" class="form-control" placeholder="Dirección">
-                </div>
-
-               </div>
-
-               <div class="mb-3">
-                <h4>Destinatario: </h4>
-                <hr>
-                <label class="form-label">Tipo de remitente: </label>
-                <select class="form-select" aria-label="Default select example">
-                    <option value="1">Empresa</option>
-                    <option value="2">Persona Natural</option>
-                  </select>
-            </div>
-
-            <div class="mb-3">
-                <div class="row">
-                    <div class="col-6">
-
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1">
-                                <i class="bi bi-key"></i>
-                            </span>
-                            <input type="text" class="form-control" placeholder="identificación">
-                        </div>
-
-                    </div>
-                    <div class="col-6">
-
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1">
-                                <i class="bi bi-person-circle"></i>
-                            </span>
-                            <input type="text" class="form-control" placeholder="Nombre">
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-
-           <div class="mb-3">
-            <div class="row">
-                <div class="col-6">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Departamento</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </div>
-                <div class="col-6">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Municipio</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </div>
-            </div>
-
-           </div>
-
-           <div class="mb-3">
-
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">
-                    <i class="bi bi-geo-alt"></i>
-                </span>
-                <input type="text" class="form-control" placeholder="Dirección">
-            </div>
-
-           </div>
-
-           <div class="mb-3">
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Zona: </option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-           </div>
-
-           <button type="submit" class="btn btn-primary">Registrar</button>
-
-            </form>
+    <div class="mb-3">
+        <h4>Mercancia: </h4>
+        <hr>
+        <div class="input-group mb-3">
+            <span class="input-group-text">
+                <i class="bi bi-box-seam-fill"></i>
+            </span>
+            <input type="text" class="form-control" placeholder="IUP">
         </div>
     </div>
-</div>
+
+    <div class="mb-3 mt-5">
+        <h4>Remitente: </h4>
+        <hr>
+        <label class="form-label">Tipo de remitente: </label>
+        <input type="text" class="form-control" placeholder="TipoRemitente">
+    </div>
+
+    <div class="mb-3">
+        <div class="row">
+            <div class="col-6">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">
+                        <i class="bi bi-key"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="identificación">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">
+                        <i class="bi bi-person-circle"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Nombre">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <div class="row">
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="departamento">
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="municipio">
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <div class="input-group mb-3">
+            <span class="input-group-text">
+                <i class="bi bi-geo-alt"></i>
+            </span>
+            <input type="text" class="form-control" placeholder="Dirección">
+        </div>
+    </div>
+
+    <div class="mb-3 mt-5">
+        <h4>Destinatario: </h4>
+        <hr>
+        <label class="form-label">Tipo de Destinatario: </label>
+        <input type="text" class="form-control" placeholder="TipoDestinatario">
+    </div>
+
+    <div class="mb-3">
+        <div class="row">
+            <div class="col-6">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">
+                        <i class="bi bi-key"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="identificación">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">
+                        <i class="bi bi-person-circle"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Nombre">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <div class="row">
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Departamento">
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Municipio">
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <div class="input-group mb-3">
+            <span class="input-group-text">
+                <i class="bi bi-geo-alt"></i>
+            </span>
+            <input type="text" class="form-control" placeholder="Dirección">
+        </div>
+    </div>
+
+    <div class="mb-3 mt-5">
+        <h4>Ubicación en cuarto: </h4>
+        <hr>
+        <select class="form-select">
+            <option selected>Zona: </option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-warning w-100">Registrar</button>
+
+</form>
+       
